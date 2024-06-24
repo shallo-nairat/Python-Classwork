@@ -15,6 +15,8 @@ class Courses(models.Model):
     course_students = models.ManyToManyField('Student')
     def __str__(self):
         return f"{self.course_name}"
+    def _coursename_(self):
+        return f"{self.course_id}"
 
 
 

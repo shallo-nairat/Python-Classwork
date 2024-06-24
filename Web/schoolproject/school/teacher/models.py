@@ -15,6 +15,11 @@ class Teacher(models.Model):
     teacher_photo = models.ImageField(upload_to='teacher_photos')
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    
+    def __email__(self):
+        return f"{self.email} {self.email}"
+    
+    
 
 
 
